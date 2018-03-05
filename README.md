@@ -87,11 +87,10 @@ command :
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
 >> image(m)
 
+```
+
 This returns :  
 ![alt text](https://raw.githubusercontent.com/sourabh3b/Pattern-Recognition1/master/i0.png "Test Image")
-
-
-```
 
 
 ```python
