@@ -11,7 +11,7 @@ Running the program :
 ``follow the instructions in the command line``
 
 ```python
-To run part 2
+To run part 1
 
 sourabh:Pattern-Recognition1 sourabh$ go run main.go 
 Part 1 (type 1) or Part 2 (type 2)
