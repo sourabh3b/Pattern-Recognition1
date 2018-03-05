@@ -19,13 +19,19 @@ Below code computes the image from the pixel matrix (for mean and standard devia
  >> m = [Mean or SD matrix]
  >> image(m);
 */
-func GetMeanAndSD(digitEntered int) {
+func GetMeanAndSD(digitEntered, typeOf int) {
 
 	//loading dataset [Ref :https://github.com/petar/GoMNIST]
 	traininingSet, _, err := GoMNIST.Load("./data")
 	if err != nil {
 		panic(err)
 	}
+
+	//imageData := make([]byte, len(traininingSet.Images[1111]))
+	//imageData = traininingSet.Images[15344]
+	////printing base value for first image
+	//fmt.Println(ImageString(imageData, 28, 28))
+
 
 	//getting all digit frequency so that they can be processed
 	digitFrequency, _ := getDigitFrequency(traininingSet.Labels, traininingSet.Images)
@@ -41,14 +47,8 @@ func GetMeanAndSD(digitEntered int) {
 	//get all pixel sum from the images found in training set
 	inputDigit := getAllPixelSum(traininingSet.Images)
 
-	fmt.Println("Printing mean ::: ")
-	printMeanImage(inputDigit, digitFrequency[digitEntered])
-
-	fmt.Println("Printing Standard deviation ::: ")
-	printStandardDeviationImage(inputDigit, digitFrequency[digitEntered])
-
 	//based on the input argument pring mean od standard deviation
-	if digitEntered == 0 {
+	if typeOf == 0 {
 		fmt.Println("Calculating Mean for the image ")
 		printMeanImage(inputDigit, digitFrequency[digitEntered])
 	} else {

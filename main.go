@@ -16,22 +16,23 @@ func main() {
 	switch part {
 	case 1:
 		{
-			fmt.Println("Enter digit and type (0 for mean, 1 for standard deviation) :")
+			fmt.Println("executing part 1")
+			fmt.Println("Enter digit followed by type (0 for mean, 1 for standard deviation) :")
 
 			var digit int
-			fmt.Scanf("%d", &digit)
-			fmt.Println("You entered ::: ", digit)
+			var typeOF int
+			fmt.Scanf("%d %d", &digit,&typeOF)
 
 			if digit < 0 || digit > 9 {
 				fmt.Println("You entered invalid digit !")
 				os.Exit(0)
 			}
 
-			gomnist.GetMeanAndSD(digit)
+			gomnist.GetMeanAndSD(digit,typeOF)
 		}
 	case 2:
 		{
-			fmt.Println("part 2")
+			fmt.Println("executing part 2")
 			gomnist.BayesianDecisionClassification()
 		}
 	default:
