@@ -88,7 +88,7 @@ command :
 >> image(m)
 
 This returns :  
-![alt text](https://github.com//sourabh3b/Pattern-Recognition1/i0.png "Test Image")
+![alt text](https://github.com/sourabh3b/Pattern-Recognition1/blob/master/i0.png "Test Image")
 
 
 ```
